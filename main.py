@@ -1,5 +1,4 @@
 from random import randint
-from graphic_arts.start_game_banner import run_screensaver
 
 from graphic_arts.start_game_banner import run_screensaver
 

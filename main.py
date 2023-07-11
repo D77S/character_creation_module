@@ -1,6 +1,8 @@
 from random import randint
 from graphic_arts.start_game_banner import run_screensaver
 
+from graphic_arts.start_game_banner import run_screensaver
+
 
 def attack(char_name: str, char_class: str) -> str:
     """Возвращает текстовую строку с описанием

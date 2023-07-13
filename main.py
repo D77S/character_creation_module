@@ -2,6 +2,40 @@ from random import randint
 
 from graphic_arts.start_game_banner import run_screensaver
 
+DEFAULT_ATTACK = 5
+
+
+class Character:
+    # Константа для диапазона очков урона
+    RANGE_VALUE_ATTACK = (1, 3)
+
+    def __init__(self, name):
+        self.name = name
+
+    # Объявдяем метод атаки.
+    def attack(self):
+        # Описываем метод атаки.
+        # Вместо диапазона записана переменная класса.
+        # Оператор * распаковывает передаваемый кортеж.
+        value_attack = DEFAULT_ATTACK + randint(*self.RANGE_VALUE_ATTACK)
+        return (f'{self.name} нанёс противнику урон, равный {value_attack}')
+
+    # Объявляем метод защиты.
+    def defence(self):
+        pass
+
+
+class Warrior(Character):
+    pass
+
+
+class Mage(Character):
+    pass
+
+
+class Healer(Character):
+    pass
+
 
 def attack(char_name: str, char_class: str) -> str:
     """Возвращает текстовую строку с описанием

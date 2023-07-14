@@ -113,7 +113,7 @@ def special(char_name: str, char_class: Character) -> str:
     return ('А хуй его знает чего возвращать')
 
 
-def start_training(name, character) -> str:
+def start_training(character) -> str:
     """
     Принимает на вход объект класса Character и его имя.
     Возвращает сообщения о результатах цикла тренировки персонажа.
@@ -165,4 +165,4 @@ if __name__ == '__main__':
     print('Ты можешь выбрать один из трёх путей силы:')
     print('Воитель, Маг, Лекарь')
     char_class: Character = choice_char_class()
-    print(start_training(char_name, char_class))
+    print(start_training(char_class))
